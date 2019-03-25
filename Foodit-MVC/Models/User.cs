@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Foodit_MVC.Models
 
@@ -9,7 +11,7 @@ namespace Foodit_MVC.Models
         public string User_Password { get; set;}
 
         public string User_Id { get; set;}
-
+       
         public int User_FooditCoins { get; set;}
 
         public string User_Address { get; set;}
