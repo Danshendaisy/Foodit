@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using Foodit_MVC.Models;
+using System.Linq;
 
 namespace Foodit_MVC.Api.Controllers
 {
@@ -12,18 +13,24 @@ namespace Foodit_MVC.Api.Controllers
         public HomeController(UserInfo db)
         {
             this.db=db;
-            if (this.db.Users.Count()==0)
+            if (this.db.Users.Count() == 0)
             {
                 this.db.Users.Add(new User()
                 {
+                    UserName = "DanShenDaisy",
+                    UserEmail = "123@321.com",
+                    UserAddress="111 Lane Ave",
+                    UserId="110119",
+                    UserFooditCoins=1000,
                     
                 });
+                this.db.SaveChanges();
             }
         }
-        public IActionResult Index()
-        {
-            return Content("Home");
-     
-        }
+        [HttpGet]
+         public IActionResult GetAction()
+         {
+             return Ok(db.Users);
+         }
     }
 }
