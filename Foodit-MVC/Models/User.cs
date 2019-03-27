@@ -1,19 +1,24 @@
+using System;
+using System.Collections.Generic;
+
 namespace Foodit_MVC.Models
 
 {
     public class User {
-        public string User_Name { get; set;}
+        public string UserName { get; set;}
 
-        public string User_Password { get; set;}
+        public string UserPassword { get; set;}
 
-        public string User_Id { get; set;}
+        public string UserId { get; set;}
        
-        public int User_FooditCoins { get; set;}
+        public int UserFooditCoins { get; set;}
 
-        public string User_Address { get; set;}
+        public string UserAddress { get; set;}
 
-        public int User_PhoneNumber { get; set;}
+        public int UserPhoneNumber { get; set;}
 
-        public string User_Email { get; set;}
+        public string UserEmail { get; set;}
+
+        public List<Item> UserItems { get; set;}
     }
 }
