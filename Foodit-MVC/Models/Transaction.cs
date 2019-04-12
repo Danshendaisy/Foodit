@@ -8,7 +8,6 @@ namespace Foodit_MVC.Models
         public DateTime TransDate {get;set;}
         public int TransAmount {get;set;}
 
-
         public string TransItemId {get;set;}
         public Item TransItem {get;set;}
 

@@ -1,0 +1,21 @@
+<h2>My Foodlist</h2>
+
+<div>
+  <label>Food name:
+    <input #foodName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(foodName.value); foodName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="foodlist">
+  <li *ngFor="let food of foodlist">
+    <a routerLink="/detail/{{food.id}}">
+      <span class="badge">{{food.id}}</span> {{food.name}}
+    </a>
+    <button class="delete" title="delete food"
+      (click)="delete(food)">x</button>
+  </li>
+</ul>

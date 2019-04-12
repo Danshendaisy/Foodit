@@ -1,0 +1,11 @@
+<h3>Top Foods</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let food of foodlist" class="col-1-4"
+      routerLink="/detail/{{food.id}}">
+    <div class="module food">
+      <h4>{{food.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-food-search></app-food-search>
