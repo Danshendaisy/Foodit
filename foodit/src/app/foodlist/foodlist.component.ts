@@ -22,7 +22,7 @@ export class FoodlistComponent implements OnInit {
     .subscribe(foodlist => this.foodlist = foodlist);
   }
 
-  add(name: string): void {
+  add(Id: number, name: string, price: number): void {
     name = name.trim();
     if (!name) { return; }
     this.foodService.addFood({ name } as Food)

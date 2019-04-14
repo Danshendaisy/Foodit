@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-food.component.css']
 })
 export class AddFoodComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
+  }
 
-  constructor() { }
+  url = '';
+  onSelectFile(event) {
+    if (event.target.files && event.target.files[0]){
+      var reader = new FileReader();
 
-  ngOnInit() {
+      reader.readAsDataURL(event.target.files[0]);
+
+      reader.onload = (event) => {
+        this.url = event.target.result;
+      }
+    }
   }
 
 }
