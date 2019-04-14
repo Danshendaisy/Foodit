@@ -14,6 +14,7 @@ import { FoodDetailComponent }  from './food-detail/food-detail.component';
 import { FoodlistComponent }      from './foodlist/foodlist.component';
 import { FoodSearchComponent }  from './food-search/food-search.component';
 import { MessagesComponent } from './messages/messages.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { MessagesComponent } from './messages/messages.component';
     FoodlistComponent,
     FoodDetailComponent,
     FoodSearchComponent,
-    MessagesComponent
+    MessagesComponent,
+    ShoppingCartComponent
   ],
   bootstrap: [ AppComponent ]
 })

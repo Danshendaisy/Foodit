@@ -18,6 +18,6 @@ export class DashboardComponent implements OnInit {
 
   getFoodlist(): void {
     this.foodService.getFoodlist()
-      .subscribe(foodlist => this.foodlist = foodlist.slice(1, 5));
+      .subscribe(foodlist => this.foodlist = foodlist.slice(0, 9));
   }
 }

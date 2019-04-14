@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FOODIT';
-  description = "Bid on your favorate food!"
+  description = "Buy your favorate food from your neighbors!"
 }

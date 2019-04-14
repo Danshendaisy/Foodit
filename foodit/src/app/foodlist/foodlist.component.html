@@ -10,6 +10,7 @@
   </button>
 </div>
 
+
 <ul class="foodlist">
   <li *ngFor="let food of foodlist">
     <a routerLink="/detail/{{food.id}}">
@@ -19,3 +20,7 @@
       (click)="delete(food)">x</button>
   </li>
 </ul>
+
+<div>
+  <p>Total Price: {{food.price}}</p>
+</div>

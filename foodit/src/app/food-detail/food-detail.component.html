@@ -2,10 +2,25 @@
   <h2>{{food.name | uppercase}} Details</h2>
   <div><span>id: </span>{{food.id}}</div>
   <div>
-    <label>name:
-      <input [(ngModel)]="food.name" placeholder="name"/>
+    
+    <div><span>Name</span>
+      {{food.name}}
+    </div>
+    <div>
+      <picture >
+        <img src='../../assets/friuts.jpeg' style="width:600px;height:400px;">
+      </picture>
+    </div>
+    
+    <label>quantity
+      <input [(ngModel)]="food.quantity" placeholder="quantity"/>
     </label>
+
+
   </div>
+  <div><span>price: $</span>{{food.price}}
+
+</div>
   <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
+  <button (click)="add()">Add to Cart</button>
 </div>

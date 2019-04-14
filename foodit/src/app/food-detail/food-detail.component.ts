@@ -1,6 +1,8 @@
+import { ShoppingCartService } from './../shopping-cart.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+
 
 import { Food }         from '../food';
 import { FoodService }  from '../food.service';
@@ -16,6 +18,7 @@ export class FoodDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private foodService: FoodService,
+    private shoppingCartService: ShoppingCartService,
     private location: Location
   ) {}
 
@@ -33,8 +36,8 @@ export class FoodDetailComponent implements OnInit {
     this.location.back();
   }
 
- save(): void {
-    this.foodService.updateFood(this.food)
+ add(): void {
+    this.shoppingCartService.addFood(this.food)
       .subscribe(() => this.goBack());
   }
 }
