@@ -63,7 +63,6 @@ export class FoodService {
       catchError(this.handleError<Food[]>('searchFoodlist', []))
     );
   }
-
   //////// Save methods //////////
 
   /** POST: add a new food to the server */
@@ -92,6 +91,8 @@ export class FoodService {
       catchError(this.handleError<any>('updateFood'))
     );
   }
+
+
 
   /**
    * Handle Http operation that failed.

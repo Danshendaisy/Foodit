@@ -10,10 +10,13 @@
   <label>Price:
     <input #foodPrice />
   </label>
+  <label>Quantity:
+    <input #foodQuantity />
+  </label>
   <img [src]="url" height="200"><br/>
   <input type='file' (change)="onSelectFile($event)">
 </div>
 
-<button (click)="add(foodId.value,foodName.value,foodPrice.value);foodId.value='';foodName.value='';foodPrice.value=''">
+<button (click)="add(foodId.value,foodName.value,foodPrice.value,foodQuantity.value,url.toString);foodId.value='';foodName.value='';foodPrice.value='';foodQuantity.value=''">
   add
 </button>

@@ -7,6 +7,7 @@ import { DecimalPipe } from '@angular/common';
 export class Food {
     id: number;
     name: string;
-    price: number;
+    price:number;
+    quantity:number;
     image: HTMLImageElement;
 }
