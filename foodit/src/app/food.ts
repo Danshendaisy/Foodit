@@ -7,7 +7,6 @@ export class Food {
     id: number;
     name: string;
     price:number;
-    pic: string;
     quantity:number;
-   
+    image: HTMLImageElement;
 }

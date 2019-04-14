@@ -1,26 +1,14 @@
 <div *ngIf="food">
   <h2>{{food.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{food.id}}</div>
+  <img [src] = food.image
+              width="400"
+              height="256"
+              > {{food.name}} ${{food.price}}
   <div>
-    
-    <div><span>Name</span>
-      {{food.name}}
-    </div>
-    <div>
-      <picture >
-        <img src='../../assets/friuts.jpeg' style="width:600px;height:400px;">
-      </picture>
-    </div>
-    
-    <label>quantity
-      <input [(ngModel)]="food.quantity" placeholder="quantity"/>
+    <label>name:
+      <input [(ngModel)]="food.name" placeholder="name"/>
     </label>
-
-
   </div>
-  <div><span>price: $</span>{{food.price}}
-
-</div>
   <button (click)="goBack()">go back</button>
-  <button (click)="add()">Add to Cart</button>
+  <button (click)="save()">save</button>
 </div>

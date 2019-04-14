@@ -15,7 +15,6 @@ export class FoodlistComponent implements OnInit {
 
   ngOnInit() {
     this.getFoodlist();
-    // this.totalPrice();
   }
 
   getFoodlist(): void {
@@ -36,9 +35,5 @@ export class FoodlistComponent implements OnInit {
     this.foodlist = this.foodlist.filter(h => h !== food);
     this.foodService.deleteFood(food).subscribe();
   }
-  // totalPrice(){
-  //   return this.foodlist.length
-  // }
-
 
 }
