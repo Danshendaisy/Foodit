@@ -3,12 +3,20 @@
   <img [src] = food.image
               width="400"
               height="256"
-              > {{food.name}} ${{food.price}}
+              > 
   <div>
-    <label>name:
-      <input [(ngModel)]="food.name" placeholder="name"/>
+    <h3>{{food.description}}</h3>
+    <h4>Food made by: {{food.seller}}</h4>
+    <h2>Current Price${{food.price}}</h2>
+    <h3>Quantity Avaliable: {{food.quantityAvaliable}}</h3>
+    <label>Quantity:
+     <!-- <input [(ngModel)]="food.name" placeholder="name"/>-->
+     <input placeholder="1"/>
+     <button>+</button>
+     <button>-</button>
     </label>
+
   </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="add()">add to cart</button>
+  <button (click)="goBack()">Go back</button>
+  <button (click)="add()">Add to Cart!</button>
 </div>

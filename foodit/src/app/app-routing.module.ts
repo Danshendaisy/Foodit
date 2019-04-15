@@ -1,3 +1,4 @@
+import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 import { NgModule }             from '@angular/core';
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: FoodDetailComponent },
   { path: 'foodlist', component: FoodlistComponent },
-  { path: 'shoppingcart',component:ShoppingCartComponent}
+  { path: 'shoppingcart',component:ShoppingCartComponent},
+  { path: 'transaction',component:TransactionDetailComponent}
 ];
 
 @NgModule({

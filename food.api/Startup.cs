@@ -28,14 +28,14 @@ namespace food.api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<FoodContext>(options => options.UseInMemoryDatabase("Foods"));
-             services.AddCors(Options => {
+            services.AddCors(Options => {
                 Options.AddPolicy("CorsPolicy",builder =>
                 {
                     builder.WithOrigins("http://localhost:4200")
                     .AllowAnyMethod()
                     .AllowAnyHeader();
                 });
-            });
+            }); 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

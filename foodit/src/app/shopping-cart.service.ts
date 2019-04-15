@@ -15,7 +15,7 @@ const httpOptions = {
 })
 export class ShoppingCartService {
 
-  private shoppingCartUrl ='api/food';
+  private shoppingCartUrl ='https://localhost:5001/api/food';
 
   constructor(
     private http: HttpClient,
