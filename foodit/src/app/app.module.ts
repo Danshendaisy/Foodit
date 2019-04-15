@@ -16,6 +16,7 @@ import { FoodSearchComponent }  from './food-search/food-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AddFoodComponent } from './add-food/add-food.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     FoodSearchComponent,
     MessagesComponent,
     AddFoodComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    TransactionComponent
   ],
   bootstrap: [ AppComponent ]
 })

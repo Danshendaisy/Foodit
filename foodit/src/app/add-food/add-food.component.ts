@@ -27,10 +27,10 @@ export class AddFoodComponent implements OnInit {
   foodlist: Food[];
   constructor(private foodService: FoodService) { }
 
-  add(Id: number, name: string, price: number, quantity: number, url:string): void {
+  add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.foodService.addFood({ Id, name, price, quantity, url })
+    this.foodService.addFood({ name } as Food)
       .subscribe(food => {
         this.foodlist.push(food);
       });
