@@ -10,16 +10,16 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     
     const foodlist = [
-      { id: 11, name: 'Chiken',quantityAvaliable:9, price:10,seller: 'Joseph',description:'Chicken meal with fries', image: 'assets/chicken.jpg' },
-      { id: 12, name: 'Beef',quantityAvaliable:12, price:12,seller: 'David',description:'Fresh Stake seasoned with black pepper', image:'assets/beef.jpg'},
-      { id: 13, name: 'Lamb' ,quantityAvaliable:10,price:12,seller: 'Daisy',description:'Mongolian Lamb', image:'assets/lamb.jpg'},
+      { id: 11, name: 'Chicken Meal',quantityAvaliable:9, price:10,seller: 'Joseph',description:'Chicken meal with fries', image: 'assets/chicken.jpg' },
+      { id: 12, name: 'Steak',quantityAvaliable:12, price:12,seller: 'David',description:'Fresh Stake seasoned with black pepper', image:'assets/beef.jpg'},
       { id: 14, name: 'Fish' ,quantityAvaliable:null,price:12,seller: null,description:null, image:'assets/salmon.jpg'},
       { id: 15, name: 'Tofu',quantityAvaliable:null,price:12,seller: null,description:null, image:'assets/tofu.jpg' },
       { id: 16, name: 'Pork',quantityAvaliable:null,price:12,seller: null,description:null, image:'assets/pork.jpg' },
       { id: 17, name: 'Egg',quantityAvaliable:null,price:12,seller: null,description:null, image:'assets/egg.jpg' },
       { id: 18, name: 'Vegetable',quantityAvaliable:null,price:12,seller: null,description:null,image:'assets/vegetable.jpg' },
       { id: 19, name: 'Fruit',quantityAvaliable:null,price:12,seller: null,description:null, image:'assets/fruits.jpeg'  },
-      { id: 20, name: 'Beverage',quantityAvaliable:null,price:12,seller: null, description:null,image:'assets/beverage.jpg' }
+      { id: 20, name: 'Beverage',quantityAvaliable:null,price:12,seller: null, description:null,image:'assets/beverage.jpg' },
+      { id: 13, name: 'BBQ Lamb' ,quantityAvaliable:2,price:22,seller: 'Daisy',description:'BBQ', image:'assets/lamb.jpg'},
     ];
     const shoppingCart=[
       { id: 12, name: 'Beef', price:12, pic:null},

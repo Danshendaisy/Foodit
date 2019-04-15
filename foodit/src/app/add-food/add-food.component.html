@@ -1,0 +1,27 @@
+<body background="../../assets/wood2.jpg">
+<div align="center">
+ 
+  <h1 style>Add your food Here!</h1>
+
+<div style="margin-top: 10%">
+    <label>Name:
+      <input #foodName />
+    </label>
+    <label>Price:
+      <input #foodPrice />
+    </label>
+    <label>Quantity:
+      <input #foodQuantity />
+    </label>
+    <label>Description
+        <input #foodDescription />
+      </label>
+    <img [src]="url" height="200"><br/>
+    <input type='file' (change)="onSelectFile($event)">
+  </div>
+  
+  <button (click)="add(foodId.value,foodName.value,foodPrice.value,foodQuantity.value,url.toString);foodId.value='';foodName.value='';foodPrice.value='';foodQuantity.value=''">
+    add
+  </button>
+</div>
+</body>

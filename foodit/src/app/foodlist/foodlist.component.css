@@ -51,13 +51,14 @@
 }
 
 button {
-  background-color: #eee;
+  background-color: #ffc34d;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
   cursor: hand;
   font-family: Arial;
+  color: #4d2600;
 }
 
 button:hover {

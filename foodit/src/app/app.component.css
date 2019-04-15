@@ -1,4 +1,8 @@
 /* AppComponent's private CSS styles */
+body, html {
+  height: 100%;
+}
+
 h1 {
     font-size: 1.2em;
     color: #999;
