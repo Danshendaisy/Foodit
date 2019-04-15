@@ -10,7 +10,7 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     
     const foodlist = [
-      { id: 11, name: 'Chiken', price:10, image: '/assets/pork.jpg' },
+      { id: 11, name: 'Chicken', price:10, image: 'assets/chicken.jpg' },
       { id: 12, name: 'Beef', price:12, image:'assets/beef.jpg'},
       { id: 13, name: 'Lamb' ,price:12, image:'assets/lamb.jpg'},
       { id: 14, name: 'Fish' ,price:12, image:'assets/salmon.jpg'},

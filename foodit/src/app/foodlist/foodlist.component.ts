@@ -21,7 +21,7 @@ export class FoodlistComponent implements OnInit {
     this.foodService.getFoodlist()
     .subscribe(foodlist => this.foodlist = foodlist);
   }
-/* Id: number, price: number,quantity:number,url:string*/
+
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }

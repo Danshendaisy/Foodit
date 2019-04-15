@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FoodService } from '../food.service';
+import { Food } from '../food';
 
 @Component({
   selector: 'app-add-food',
@@ -21,6 +23,17 @@ export class AddFoodComponent implements OnInit {
         this.url = event.target.result;
       }
     }
+  }
+  foodlist: Food[];
+  constructor(private foodService: FoodService) { }
+
+  add(Id: number, name: string, price: number, quantity: number, url:string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.foodService.addFood({ Id, name, price, quantity, url })
+      .subscribe(food => {
+        this.foodlist.push(food);
+      });
   }
 
 }
