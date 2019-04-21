@@ -80,6 +80,7 @@ namespace food.api.Controllers
                 return NotFound();
             }
             db.Foods.Remove(food);
+            
             db.SaveChanges();
 
             return NoContent();
