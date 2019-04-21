@@ -1,11 +1,14 @@
 <div *ngIf="food">
   <h2>{{food.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{food.id}}</div>
+  <img [src] = food.image
+              width="400"
+              height="256"
+              > {{food.name}} ${{food.price}}
   <div>
     <label>name:
       <input [(ngModel)]="food.name" placeholder="name"/>
     </label>
   </div>
   <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
+  <button (click)="add()">add to cart</button>
 </div>

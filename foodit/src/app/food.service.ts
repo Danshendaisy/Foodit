@@ -14,7 +14,7 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class FoodService {
 
-  private foodlistUrl = 'api/foodlist';  // URL to web api
+  private foodlistUrl = 'https://localhost:5001/api/food';  // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -63,12 +63,11 @@ export class FoodService {
       catchError(this.handleError<Food[]>('searchFoodlist', []))
     );
   }
-
   //////// Save methods //////////
 
   /** POST: add a new food to the server */
-  addFood (hero: Food): Observable<Food> {
-    return this.http.post<Food>(this.foodlistUrl, hero, httpOptions).pipe(
+  addFood (food: Food): Observable<Food> {
+    return this.http.post<Food>(this.foodlistUrl, food, httpOptions).pipe(
       tap((newFood: Food) => this.log(`added food w/ id=${newFood.id}`)),
       catchError(this.handleError<Food>('addFood'))
     );
@@ -92,6 +91,8 @@ export class FoodService {
       catchError(this.handleError<any>('updateFood'))
     );
   }
+
+
 
   /**
    * Handle Http operation that failed.

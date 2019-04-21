@@ -1,9 +1,15 @@
-<h3>Top Foods</h3>
+<h3>All You Can Select</h3>
 <div class="grid grid-pad">
-  <a *ngFor="let food of foodlist" class="col-1-4"
+  <a *ngFor="let food of foodlist" class="col-1-5"
       routerLink="/detail/{{food.id}}">
     <div class="module food">
-      <h4>{{food.name}}</h4>
+          <h4> 
+    
+              <img [src] = food.image
+                    width="400"
+                    height="256"
+                    > {{food.name}} ${{food.price}}
+            </h4>
     </div>
   </a>
 </div>
