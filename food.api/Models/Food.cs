@@ -13,6 +13,8 @@ namespace Foodit.Api.Models{
     public int Quantity{get;set;}
 
     public string image{get;set;}
+    public string Seller {get;set;}
+    public string PlaceToMeet {get;set;}
 
 
    //  public string MyTransId  {get;set;}

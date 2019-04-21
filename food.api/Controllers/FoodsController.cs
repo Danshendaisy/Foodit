@@ -25,7 +25,9 @@ namespace food.api.Controllers
                     Description="Delicious braised pork",
                     Price = 12,
                     Quantity = 0,
-                    image = null
+                    image = null,
+                    Seller = "David",
+                    PlaceToMeet = "Ohio Union"
                 });
                 this.db.Foods.Add(new Food()
                 {
@@ -34,7 +36,9 @@ namespace food.api.Controllers
                     Description="General Tso Chicken",
                     Price = 10,
                     Quantity = 0,
-                    image = null
+                    image = null,
+                    Seller = "David",
+                    PlaceToMeet = "Ohio Union"
                 });
 
             }
