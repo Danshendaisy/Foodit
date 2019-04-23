@@ -3,7 +3,7 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+//import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppRoutingModule }     from './app-routing.module';
@@ -15,6 +15,7 @@ import { FoodlistComponent }      from './foodlist/foodlist.component';
 import { FoodSearchComponent }  from './food-search/food-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { AddFoodComponent } from './add-food/add-food.component';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     FoodDetailComponent,
     FoodSearchComponent,
     MessagesComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    AddFoodComponent
   ],
   bootstrap: [ AppComponent ]
 })

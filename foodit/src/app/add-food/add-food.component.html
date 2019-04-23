@@ -1,0 +1,45 @@
+<h1>Add New Food</h1>
+
+<div>
+<label>Your Name:
+<input #foodId />
+</label>
+</div>
+
+<div>
+<label>Food Name:
+<input #foodName />
+</label>
+</div>
+
+<div>
+<label>Price:
+<input #foodPrice />
+</label>
+</div>
+
+<div>
+<label>Quantity:
+<input #foodQuantity />
+</label>
+</div>
+
+<div>
+<label>Description:
+<input #foodDescription/>
+</label>
+</div>
+
+<div>
+  <label>Place to Meet:</label>
+  <input #placeToMeet/>
+</div>
+
+<div>
+<img [src]="url" height="200"><br/>
+<input type='file' (change)="onSelectFile($event)">
+</div>
+
+<button>
+add
+</button>
