@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Food } from '../food';
+import { FoodService } from '../food.service';
 
 @Component({
   selector: 'app-add-food',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-food.component.css']
 })
 export class AddFoodComponent implements OnInit {
-  
-  url = "";
 
-  constructor() { }
+  url = '';
+  newFood: Food;
+
+  constructor(private foodService: FoodService ) { }
 
   ngOnInit() {
   }
@@ -22,5 +25,16 @@ export class AddFoodComponent implements OnInit {
             }
             reader.readAsDataURL(event.target.files[0]);
         }
+  }
+
+  add(foodId: number,foodN: string, foodP: number, foodQ: number,foodD: string, PTM: string, url: string){
+    this.newFood.id = foodId;
+    this.newFood.name = foodN;
+    this.newFood.price = foodP;
+    this.newFood.quantity = foodQ;
+    this.newFood.description = foodD;
+    this.newFood.ptm = PTM;
+    this.newFood.image = url;
+    this.foodService.addFood(this.newFood)  
   }
 }

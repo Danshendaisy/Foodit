@@ -8,31 +8,31 @@
 
 <div>
 <label>Food Name:
-<input #foodName />
+<input #foodN />
 </label>
 </div>
 
 <div>
 <label>Price:
-<input #foodPrice />
+<input #foodP />
 </label>
 </div>
 
 <div>
 <label>Quantity:
-<input #foodQuantity />
+<input #foodQ />
 </label>
 </div>
 
 <div>
 <label>Description:
-<input #foodDescription/>
+<input #foodD/>
 </label>
 </div>
 
 <div>
   <label>Place to Meet:</label>
-  <input #placeToMeet/>
+  <input #PTM/>
 </div>
 
 <div>
@@ -40,6 +40,6 @@
 <input type='file' (change)="onSelectFile($event)">
 </div>
 
-<button>
+<button (click)="add(foodId.value,foodN.value,foodP.value,foodQ.value,foodD.value,PTM.value,url);foodId.value='';foodN.value='';foodP.value='';foodQ.value='';foodD.value,PTM.value">
 add
 </button>

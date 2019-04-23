@@ -6,8 +6,9 @@ import { UrlMatcher } from '@angular/router';
 export class Food {
     id: number;
     name: string;
-    description: string;
-    price:number;
+    price:number;   
     quantity:number;
-    image: HTMLImageElement;
+    description: string;
+    ptm: string;
+    image: string;
 }
