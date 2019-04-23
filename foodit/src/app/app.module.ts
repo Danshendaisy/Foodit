@@ -4,7 +4,7 @@ import { FormsModule }    from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+//import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppRoutingModule }     from './app-routing.module';
 
@@ -14,9 +14,7 @@ import { FoodDetailComponent }  from './food-detail/food-detail.component';
 import { FoodlistComponent }      from './foodlist/foodlist.component';
 import { FoodSearchComponent }  from './food-search/food-search.component';
 import { MessagesComponent } from './messages/messages.component';
-import { AddFoodComponent } from './add-food/add-food.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { TransactionComponent } from './transaction/transaction.component';
 
 @NgModule({
   imports: [
@@ -28,9 +26,9 @@ import { TransactionComponent } from './transaction/transaction.component';
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // )
   ],
   declarations: [
     AppComponent,
@@ -39,9 +37,7 @@ import { TransactionComponent } from './transaction/transaction.component';
     FoodDetailComponent,
     FoodSearchComponent,
     MessagesComponent,
-    AddFoodComponent,
-    ShoppingCartComponent,
-    TransactionComponent
+    ShoppingCartComponent
   ],
   bootstrap: [ AppComponent ]
 })
