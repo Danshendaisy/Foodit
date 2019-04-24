@@ -25,7 +25,7 @@ namespace food.api.Controllers
                     Description="Delicious braised pork",
                     Price = 12,
                     Quantity = 0,
-                    image = null,
+                    image = "https://www.seriouseats.com/recipes/images/2016/02/20160208-sous-vide-pork-chop-guide-food-lab-37.jpg",
                     Seller = "David",
                     PlaceToMeet = "Ohio Union"
                 });
@@ -36,7 +36,7 @@ namespace food.api.Controllers
                     Description="General Tso Chicken",
                     Price = 10,
                     Quantity = 0,
-                    image = null,
+                    image = "https://images6.alphacoders.com/439/439410.jpg",
                     Seller = "David",
                     PlaceToMeet = "Ohio Union"
                 });
