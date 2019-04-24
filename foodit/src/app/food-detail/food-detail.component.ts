@@ -33,5 +33,6 @@ export class FoodDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+  
 
 }
