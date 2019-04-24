@@ -10,7 +10,7 @@ import { FoodService } from '../food.service';
 export class AddFoodComponent implements OnInit {
 
   url = '';
-  newFood: Food;
+  fileName = '';
 
   constructor(private foodService: FoodService ) { }
 
@@ -24,17 +24,20 @@ export class AddFoodComponent implements OnInit {
                 this.url = event.target.result;
             }
             reader.readAsDataURL(event.target.files[0]);
+            this.fileName = event.target.files[0].name;
         }
   }
 
-  add(foodId: number,foodN: string, foodP: number, foodQ: number,foodD: string, PTM: string, url: string){
-    this.newFood.id = foodId;
-    this.newFood.name = foodN;
-    this.newFood.price = foodP;
-    this.newFood.quantity = foodQ;
-    this.newFood.description = foodD;
-    this.newFood.ptm = PTM;
-    this.newFood.image = url;
-    this.foodService.addFood(this.newFood)  
+  addF(foodYN: string,foodFN: string, foodP: number, foodQ: number,foodD: string, PTM: string){
+    var newFood = new Food();
+    newFood.seller = foodYN;
+    newFood.name = foodFN;
+    newFood.price = foodP;
+    newFood.quantity = foodQ;
+    newFood.description = foodD;
+    newFood.PlaceToMeet = PTM;
+    newFood.image = "assets/"+ this.fileName;
+    this.foodService.addFood(newFood).subscribe();  
   }
+
 }

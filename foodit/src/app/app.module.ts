@@ -37,7 +37,7 @@ import { AddFoodComponent } from './add-food/add-food.component';
     FoodDetailComponent,
     FoodSearchComponent,
     MessagesComponent,
-    AddFoodComponent
+    AddFoodComponent,
   ],
   bootstrap: [ AppComponent ]
 })

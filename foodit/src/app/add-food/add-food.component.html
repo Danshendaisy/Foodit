@@ -1,45 +1,45 @@
 <h1>Add New Food</h1>
 
 <div>
-<label>Your Name:
-<input #foodId />
-</label>
+  <label>Your Name:
+    <input #foodYN />
+  </label>
 </div>
 
 <div>
-<label>Food Name:
-<input #foodN />
-</label>
+  <label>Food Name:
+    <input #foodFN />
+  </label>
 </div>
 
 <div>
-<label>Price:
-<input #foodP />
-</label>
+  <label>Price:
+    <input #foodP />
+  </label>
 </div>
 
 <div>
-<label>Quantity:
-<input #foodQ />
-</label>
+  <label>Quantity:
+    <input #foodQ />
+  </label>
 </div>
 
 <div>
-<label>Description:
-<input #foodD/>
-</label>
+  <label>Description:
+    <input #foodD/>
+  </label>
 </div>
 
 <div>
   <label>Place to Meet:</label>
-  <input #PTM/>
+    <input #PTM/>
 </div>
 
 <div>
-<img [src]="url" height="200"><br/>
-<input type='file' (change)="onSelectFile($event)">
+  <img [src]="url" height="200"><br/>
+    <input type='file' (change)="onSelectFile($event)">
 </div>
 
-<button (click)="add(foodId.value,foodN.value,foodP.value,foodQ.value,foodD.value,PTM.value,url);foodId.value='';foodN.value='';foodP.value='';foodQ.value='';foodD.value,PTM.value">
-add
+<button (click)="addF(foodYN.value,foodFN.value,foodP.value,foodQ.value,foodD.value,PTM.value); foodYN.value=''; foodFN.value=''; foodP.value=''; foodQ.value=''; foodD.value=''; PTM.value=''">
+Add
 </button>

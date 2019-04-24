@@ -5,10 +5,11 @@ import { UrlMatcher } from '@angular/router';
 
 export class Food {
     id: number;
+    seller: string;
     name: string;
     price:number;   
     quantity:number;
     description: string;
-    ptm: string;
+    PlaceToMeet: string;
     image: string;
 }
