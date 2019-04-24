@@ -10,4 +10,6 @@ export class Food {
     price:number;
     quantity:number;
     image: HTMLImageElement;
+    seller: string;
+    PlaceToMeet: string;
 }
