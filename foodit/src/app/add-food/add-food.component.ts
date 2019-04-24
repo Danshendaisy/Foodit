@@ -35,7 +35,7 @@ export class AddFoodComponent implements OnInit {
     newFood.price = foodP;
     newFood.quantity = foodQ;
     newFood.description = foodD;
-    newFood.PlaceToMeet = PTM;
+    newFood.placeToMeet = PTM;
     newFood.image = "assets/"+ this.fileName;
     this.foodService.addFood(newFood).subscribe();  
   }
