@@ -4,6 +4,7 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { FoodlistComponent }      from './foodlist/foodlist.component';
 import { FoodDetailComponent }  from './food-detail/food-detail.component';
 import { AddFoodComponent } from './add-food/add-food.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: FoodDetailComponent },
   { path: 'foodlist', component: FoodlistComponent },
-  { path: 'addfood', component: AddFoodComponent}
+  { path: 'addfood', component: AddFoodComponent},
+  { path: 'contactus', component: ContactUsComponent}
 ];
 
 @NgModule({

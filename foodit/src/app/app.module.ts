@@ -15,6 +15,7 @@ import { FoodlistComponent }      from './foodlist/foodlist.component';
 import { FoodSearchComponent }  from './food-search/food-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AddFoodComponent } from './add-food/add-food.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { AddFoodComponent } from './add-food/add-food.component';
     FoodSearchComponent,
     MessagesComponent,
     AddFoodComponent,
+    ContactUsComponent
   ],
   bootstrap: [ AppComponent ]
 })
