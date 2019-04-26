@@ -16,7 +16,7 @@ export class FoodService {
 
  //   private foodlistUrl = "http://localhost:3000/db/food"
 
-  private foodlistUrl = 'http://peaceful-ridge-58551.herokuapp.com/db/food';  // URL to web api
+  private foodlistUrl = 'https://peaceful-ridge-58551.herokuapp.com/db/food';  // URL to web api
 
   constructor(
     private http: HttpClient,
