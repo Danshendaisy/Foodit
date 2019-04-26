@@ -1,27 +1,27 @@
 <div *ngIf="food">
-  <h2>{{food.name | uppercase}} Details</h2>
+  <h2>{{food.Name | uppercase}} Details</h2>
   <img [src] = food.image
               width="400"
               height="256"
               >
   <div>
-    <label>Seller Name: {{food.seller}} </label>
+    <label>Seller Name: {{food.Seller}} </label>
   </div>
 
   <div>
-    <label>Price: ${{food.price}} </label>
+    <label>Price: ${{food.Price}} </label>
   </div>
 
   <div>
-    <label>Quantity: {{food.quantity}} </label>
+    <label>Quantity: {{food.Quantity}} </label>
   </div>
 
   <div>
-    <label>Description: {{food.description}} </label>
+    <label>Description: {{food.Description}} </label>
   </div>
 
   <div>
-    <label>Place To Meet: {{food.placeToMeet}} </label>
+    <label>Place To Meet: {{food.PlaceToMeet}} </label>
   </div>
 
   <button (click)="goBack()">go back</button>
