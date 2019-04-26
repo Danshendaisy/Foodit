@@ -1,8 +1,0 @@
-BrightTag.site('yri1Ute',function(s){
-s.dbe('referrer', '\x27https://biglickbrewingco.com/services/delicious-food/\x27');
-s.dbe('page url', 'window.location.href',{pageId:3700816});
-s.domready(function(){
-s.tag('\x3cscript src\x3d\x22https://pippio.com/api/sync?pid\x3d500034\x26it\x3d4\x26iv\x3d'+s.data('uid-hashed-email-md5')+'\x26it\x3d4\x26iv\x3d'+s.data('uid-hashed-email-sha1')+'\x26it\x3d4\x26iv\x3d'+s.data('uid-hashed-email-sha256')+'\x22 async\x3e\x3c/script\x3e',{tagId:6613201});
-s.tag('\x3cimg style\x3d\x22visibility:hidden;\x22 height\x3d\x221\x22 width\x3d\x221\x22 src\x3d\x22https://be.moresatisfied.com/initialize.png?md5\x3d'+s.data('uid-hashed-email-md5')+'\x26sha1\x3d'+s.data('uid-hashed-email-sha1')+'\x26sha256\x3d'+s.data('uid-hashed-email-sha256')+'\x26url\x3d'+s.data('page url')+'\x22/\x3e\n\n\x3cimg style\x3d\x22visibility:hidden;display:none;\x22 height\x3d\x221\x22 width\x3d\x221\x22 src\x3d\x22//s.thebrighttag.com/px?site\x3d55NeGM3\x26referrer\x3dDBPF\x26id1\x3d'+s.data('uid-hashed-email-md5')+'\x26id2\x3d'+s.data('uid-hashed-email-sha1')+'\x26id3\x3d'+s.data('uid-hashed-email-sha256')+'\x26ref\x3d'+s.data('referrer')+'\x26db\x3dTesting-4L\x26ss\x3d1\x22\x3e',{tagId:6820947});
-});
-});

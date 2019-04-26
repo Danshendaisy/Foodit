@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
 
   getFoodlist(): void {
     this.foodService.getFoodlist()
-      .subscribe(foodlist => this.foodlist = foodlist.slice(0,10));
+      .subscribe(foodlist => this.foodlist = foodlist.slice(0,foodlist.length));
       // use foodlist.size or something like that
   }
 }
