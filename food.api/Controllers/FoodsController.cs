@@ -24,8 +24,8 @@ namespace food.api.Controllers
                     Name = "Pork",
                     Description="Delicious braised pork",
                     Price = 12,
-                    Quantity = 0,
-                    image = null,
+                    Quantity = 1,
+                    image = "assets/pork.jpg",
                     Seller = "David",
                     PlaceToMeet = "Ohio Union"
                 });
@@ -35,8 +35,8 @@ namespace food.api.Controllers
                     Name = "Chicken",
                     Description="General Tso Chicken",
                     Price = 10,
-                    Quantity = 0,
-                    image = null,
+                    Quantity = 1,
+                    image = "assets/chicken.jpg",
                     Seller = "David",
                     PlaceToMeet = "Ohio Union"
                 });

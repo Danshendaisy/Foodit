@@ -14,7 +14,7 @@ const httpOptions = {
 @Injectable({ providedIn: 'root' })
 export class FoodService {
 
-  private foodlistUrl = 'https://localhost:5001/api/food';  // URL to web api
+  private foodlistUrl = 'http://peaceful-ridge-58551.herokuapp.com/db/food';  // URL to web api
 
   constructor(
     private http: HttpClient,
