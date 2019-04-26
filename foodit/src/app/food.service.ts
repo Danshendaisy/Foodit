@@ -16,15 +16,15 @@ export class FoodService {
 
  //   private foodlistUrl = "http://localhost:3000/db/food"
 
-  private foodlistUrl = 'http://peaceful-ridge-58551.herokuapp.com/db/food';  // URL to web api
+  private foodlistUrl = 'https://peaceful-ridge-58551.herokuapp.com/db/food';  // URL to web api
 
   constructor(
-    private http: HttpClient,
+    private https: HttpClient,
     private messageService: MessageService) { }
 
   /** GET foodlist from the server */
   getFoodlist (): Observable<Food[]> {
-    return this.http.get<Food[]>(this.foodlistUrl)
+    return this.https.get<Food[]>(this.foodlistUrl)
       .pipe(
         tap(_ => this.log('fetched foodlist')),
         catchError(this.handleError('getFoodlist', []))
@@ -34,7 +34,7 @@ export class FoodService {
   /** GET food by id. Return `undefined` when id not found */
   getFoodNo404<Data>(id: number): Observable<Food> {
     const url = `${this.foodlistUrl}/?id=${id}`;
-    return this.http.get<Food[]>(url)
+    return this.https.get<Food[]>(url)
       .pipe(
         map(foodlist => foodlist[0]), // returns a {0|1} element array
         tap(h => {
@@ -48,7 +48,7 @@ export class FoodService {
   /** GET food by id. Will 404 if id not found */
   getFood(id: number): Observable<Food> {
     const url = `${this.foodlistUrl}/${id}`;
-    return this.http.get<Food>(url).pipe(
+    return this.https.get<Food>(url).pipe(
       tap(_ => this.log(`fetched Food id=${id}`)),
       catchError(this.handleError<Food>(`getFood id=${id}`))
     );
@@ -60,7 +60,7 @@ export class FoodService {
       // if not search term, return empty food array.
       return of([]);
     }
-    return this.http.get<Food[]>(`${this.foodlistUrl}/?name=${term}`).pipe(
+    return this.https.get<Food[]>(`${this.foodlistUrl}/?name=${term}`).pipe(
       tap(_ => this.log(`found foodlist matching "${term}"`)),
       catchError(this.handleError<Food[]>('searchFoodlist', []))
     );
@@ -69,7 +69,7 @@ export class FoodService {
 
   /** POST: add a new food to the server */
   addFood (food: Food): Observable<Food> {
-    return this.http.post<Food>(this.foodlistUrl, food, httpOptions).pipe(
+    return this.https.post<Food>(this.foodlistUrl, food, httpOptions).pipe(
       tap((newFood: Food) => this.log(`added food w/ id=${newFood.id}`)),
       catchError(this.handleError<Food>('addFood'))
     );
@@ -80,7 +80,7 @@ export class FoodService {
     const id = typeof food === 'number' ? food : food.id;
     const url = `${this.foodlistUrl}/${id}`;
 
-    return this.http.delete<Food>(url, httpOptions).pipe(
+    return this.https.delete<Food>(url, httpOptions).pipe(
       tap(_ => this.log(`deleted food id=${id}`)),
       catchError(this.handleError<Food>('deleteHero'))
     );
@@ -88,7 +88,7 @@ export class FoodService {
 
   /** PUT: update the food on the server */
   updateFood (food: Food): Observable<any> {
-    return this.http.put(this.foodlistUrl, food, httpOptions).pipe(
+    return this.https.put(this.foodlistUrl, food, httpOptions).pipe(
       tap(_ => this.log(`updated food id=${food.id}`)),
       catchError(this.handleError<any>('updateFood'))
     );
